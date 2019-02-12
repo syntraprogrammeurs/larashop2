@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>Edit van {{$category->name}}</h1>
-                <form method="POST" action="/categories/{{$category->id}}">
+                <form method="POST" action="{{Route('categories.update',$category->id)}}">
                     <input type="hidden" name="_method" value="PUT">
                     <div class="form-group">
                         <label for="name">category</label>

@@ -5,7 +5,7 @@
             <div class="col-12">
                 <h1>Create category</h1>
 
-                <form method="POST" action="/categories">
+                <form method="POST" action="{{Route('categories.store')}}">
 
                     <div class="form-group">
                         <label for="name">category</label>

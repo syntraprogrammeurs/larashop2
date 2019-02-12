@@ -5,7 +5,7 @@
             <div class="col-12">
                 <h1>Create brand</h1>
 
-                <form method="POST" action="/brands">
+                <form method="POST" action="{{Route('brands.store')}}">
 
                     <div class="form-group">
                         <label for="name">Brand</label>
