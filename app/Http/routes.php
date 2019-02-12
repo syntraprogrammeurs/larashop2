@@ -75,3 +75,4 @@ Route::get('/dashboard', 'DashboardController@index');
 /*brands*/
 
 Route::resource('/brands','BrandsController');
+Route::resource('/categories','CategoryController');

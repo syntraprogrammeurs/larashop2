@@ -3,15 +3,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Create brand</h1>
+                <h1>Create category</h1>
 
-                <form method="POST" action="/brands">
+                <form method="POST" action="/categories">
 
                     <div class="form-group">
-                        <label for="name">Brand</label>
+                        <label for="name">category</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="name" id="name"  placeholder="Naam van de brand"/>
+                            <input type="text" class="form-control" name="name" id="name"  placeholder="Naam van de category"/>
                             {{csrf_field()}}
                         </div>
                     </div>

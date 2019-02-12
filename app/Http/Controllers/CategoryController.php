@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Brand;
+use App\Category;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class BrandsController extends Controller
+class CategoryController extends Controller
 {
-    var $brands;
+    var $category;
     public function __construct()
     {
         $this->middleware('auth');
-        $this->brands = Brand::all();
+        $this->category = Category::all();
     }
     /**
      * Display a listing of the resource.
@@ -23,7 +23,7 @@ class BrandsController extends Controller
     public function index()
     {
         //
-        return view('admin.brands.index', array('brands'=>$this->brands));
+        return view('admin.categories.index', array('category'=>$this->category));
     }
 
     /**
@@ -34,7 +34,7 @@ class BrandsController extends Controller
     public function create()
     {
         //
-        return view('admin.brands.create');
+        return view('admin.categories.create');
     }
 
     /**
@@ -48,8 +48,8 @@ class BrandsController extends Controller
         //
 
 
-        Brand::create($request->all());
-        return redirect('/brands');
+        Category::create($request->all());
+        return redirect('/categories');
 
 
     }
@@ -74,8 +74,8 @@ class BrandsController extends Controller
     public function edit($id)
     {
         //
-        $brand = Brand::findOrFail($id); //ophalen van alle velden uit DB.
-        return view('admin.brands.edit', compact('brand'));
+        $category = Category::findOrFail($id); //ophalen van alle velden uit DB.
+        return view('admin.categories.edit', compact('category'));
     }
 
     /**
@@ -88,9 +88,9 @@ class BrandsController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $brand = Brand::findOrFail($id);
-        $brand->update($request->all());
-        return redirect('/brands');
+        $Category = Category::findOrFail($id);
+        $Category->update($request->all());
+        return redirect('/categories');
     }
 
     /**

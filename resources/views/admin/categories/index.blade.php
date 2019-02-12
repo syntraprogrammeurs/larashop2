@@ -3,14 +3,14 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Lijst van brands</h1>
+                <h1>Lijst van categories</h1>
 
-                <a class="btn btn-primary" href="/brands/create">Nieuwe Brand</a>
+                <a class="btn btn-primary" href="/categories/create">Nieuwe category</a>
                 <ul class="list-group">
-                @foreach($brands as $brand)
+                @foreach($category as $cat)
                     <li class="list-group-item">
-                        {{$brand->name}} -
-                        <a class="btn btn-primary" href="/brands/{{$brand->id}}/edit">Edit</a>
+                        {{$cat->name}} -
+                        <a class="btn btn-primary" href="/categories/{{$cat->id}}/edit">Edit</a>
                     </li>
                 @endforeach
                 </ul>
