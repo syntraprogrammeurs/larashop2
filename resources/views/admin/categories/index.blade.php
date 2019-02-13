@@ -11,6 +11,18 @@
                     <li class="list-group-item">
                         {{$cat->name}} -
                         <a class="btn btn-primary" href="{{Route('categories.edit',$cat->id)}}">Edit</a>
+
+                        <ul class="list-group">
+
+
+
+                                    @foreach($cat->subcategories as $subCategory)
+                                            <li>{{$subCategory->name}}</li>
+                                      @endforeach
+
+
+
+                        </ul>
                     </li>
                 @endforeach
                 </ul>

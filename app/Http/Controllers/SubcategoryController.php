@@ -2,19 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class CategoryController extends Controller
+class SubcategoryController extends Controller
 {
-    var $category;
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->category = Category::all();
-    }
     /**
      * Display a listing of the resource.
      *
@@ -23,8 +16,6 @@ class CategoryController extends Controller
     public function index()
     {
         //
-
-        return view('admin.categories.index', array('category'=>$this->category));
     }
 
     /**
@@ -35,7 +26,6 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        return view('admin.categories.create');
     }
 
     /**
@@ -47,12 +37,6 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
-
-
-        Category::create($request->all());
-        return redirect('/categories');
-
-
     }
 
     /**
@@ -75,8 +59,6 @@ class CategoryController extends Controller
     public function edit($id)
     {
         //
-        $category = Category::findOrFail($id); //ophalen van alle velden uit DB.
-        return view('admin.categories.edit', compact('category'));
     }
 
     /**
@@ -89,9 +71,6 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $Category = Category::findOrFail($id);
-        $Category->update($request->all());
-        return redirect('/categories');
     }
 
     /**
@@ -104,8 +83,4 @@ class CategoryController extends Controller
     {
         //
     }
-
-
 }
-
-

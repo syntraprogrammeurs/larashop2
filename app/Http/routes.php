@@ -76,3 +76,6 @@ Route::get('/dashboard', 'DashboardController@index');
 
 Route::resource('/brands','BrandsController');
 Route::resource('/categories','CategoryController');
+Route::resource('/subcategories','SubcategoryController');
+
+
